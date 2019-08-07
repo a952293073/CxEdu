@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @EntityScan("com.xuecheng.framework.domain.cms")
-@ComponentScan(basePackages = {"com.xuecheng.api.cms"})
+@ComponentScan(basePackages = {"com.xuecheng.api"})
 @ComponentScan(basePackages = {"com.xuecheng.manage_cms"})
 @SpringBootApplication
 public class ManageCmsApplication {

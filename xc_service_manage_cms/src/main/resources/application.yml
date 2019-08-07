@@ -5,5 +5,5 @@ spring:
     name: xc_service_manage_cms
   data:
     mongodb:
-      uri: mongodb://localhost:27017
+      uri: mongodb://root:root@localhost:27017
       database: xc_cms
