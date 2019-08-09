@@ -27,4 +27,23 @@ public class CmsPageController implements CmsPageControllerApi {
     public CmsPageResult addCmsPage(@RequestBody CmsPage cmsPage) {
         return cmsPageService.addCmsPage(cmsPage);
     }
+
+    @Override
+    @GetMapping("/get/{pageId}")
+    public CmsPage getCmsPageByPageId(@PathVariable("pageId") String pageId) {
+        return cmsPageService.getCmsPageByPageId(pageId);
+    }
+
+    @Override
+    @PutMapping("/edit/{pageId}")
+    public CmsPageResult updateCmsPage(@PathVariable("pageId") String pageId,@RequestBody CmsPage cmsPage) {
+        return cmsPageService.updateCmsPage(pageId,cmsPage);
+    }
+
+    @Override
+    @DeleteMapping("/delete/{pageId}")
+    public CmsPageResult deleteCmsPage(@PathVariable("pageId") String pageId) {
+
+        return cmsPageService.deleteCmsPage(pageId);
+    }
 }

@@ -20,4 +20,10 @@ public interface CmsPageControllerApi {
     public QueryResponseResult findList(int page, int size, QueryPageRequest queryPageRequest);
     @ApiOperation("新增页面")
     public CmsPageResult addCmsPage(CmsPage cmsPage);
+    @ApiOperation("根据pageId获取页面")
+    public CmsPage getCmsPageByPageId(String pageId);
+    @ApiOperation("根据pageId修改页面")
+    public CmsPageResult updateCmsPage(String pageId,CmsPage cmsPage);
+    @ApiOperation("根据pageId删除页面")
+    public CmsPageResult deleteCmsPage(String pageId);
 }

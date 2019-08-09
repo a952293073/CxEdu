@@ -19,6 +19,8 @@ public class QueryPageRequest {
     //页面名称
     @ApiModelProperty("页面名称")
     private String pageName;
+    @ApiModelProperty("页面类型")
+    private String pageType;
     //页面别名
     @ApiModelProperty("页面别名")
     private String pageAliase;
