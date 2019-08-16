@@ -5,6 +5,7 @@ import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
+import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.CmsPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,12 @@ public class CmsPageController implements CmsPageControllerApi {
     @PostMapping("/add")
     public CmsPageResult addCmsPage(@RequestBody CmsPage cmsPage) {
         return cmsPageService.addCmsPage(cmsPage);
+    }
+
+    @Override
+    @PostMapping("/postPage/{pageId}")
+    public ResponseResult postCmsPageHtml(@PathVariable("pageId") String pageId) {
+        return cmsPageService.postPage(pageId);
     }
 
     @Override
